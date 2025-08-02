@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*reset.css 연결*/
+@import url(./reset.css);
+/*웹 폰트*/
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*폰트 기본 설정*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Gothic A1", "Urbanist", sans-serif;
+  color: var(--black-color);
+}
