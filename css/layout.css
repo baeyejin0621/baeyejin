@@ -2,7 +2,7 @@
 /*reset.css 연결*/
 @import url(./reset.css);
 /*웹 폰트*/
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*폰트 기본 설정*/
 html {
@@ -11,5 +11,94 @@ html {
 
 body {
   font-family: "Gothic A1", "Urbanist", sans-serif;
+  font-weight: 500;
   color: var(--black-color);
+}
+
+/*컨텐츠 영역*/
+.con {
+  width: 150rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*헤더*/
+header {
+  width: 100%;
+  height: 8rem;
+  background-color: var(--white-color);
+}
+
+header .con {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*로고*/
+header h1 a {
+  display: block;
+  font-family: Urbanist;
+  font-size: 3.6rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--main-color);
+}
+
+/*gnb*/
+header nav ul {
+  display: flex;
+  gap: 15rem;
+}
+
+header nav ul li {
+  width: 8rem;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transform: rotate(0.03deg); /*안티앨리어싱 효과*/
+  position: relative;
+}
+
+/*호버할 때 나타날 꾸밈 요소*/
+header nav ul li::before,
+header nav ul li::after {
+  display: none;
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: var(--main-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+header nav ul li::before {
+  content: "[";
+  left: -0.5rem;
+}
+
+header nav ul li::after {
+  content: "]";
+  right: -0.5rem;
+}
+
+header nav ul li:nth-child(3)::before {
+  left: -2rem;
+}
+
+header nav ul li:nth-child(3)::after {
+  right: -2rem;
+}
+
+/*호버하면*/
+header nav ul li:hover {
+  font-weight: 700;
+}
+
+header nav ul li:hover::after,
+header nav ul li:hover::before {
+  display: block;
+  transform: translateY(-50%);
 }
