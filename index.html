@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>baeyejin</title>
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="./css/layout.css" />
   </head>
@@ -29,10 +35,35 @@
       </header>
       <!--메인-->
       <main>
-        <div class="main_visual"></div>
+        <!--메인 비주얼-->
+        <section class="main_visual">
+          <div class="visual_img">
+            <div class="white_mask"></div>
+            <img src="./img/main_visual/visual_img.jpg" alt="메인 이미지" />
+          </div>
+          <div class="visual_txt">
+            <p>안녕하세요.</p>
+            <div class="inner_wrap">
+              <div class="swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">나와</li>
+                  <li class="swiper-slide">동료와</li>
+                  <li class="swiper-slide">클라이언트와</li>
+                </ul>
+              </div>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소통하는 퍼블리셔,
+                <span>배예진</span>입니다.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <!--푸터-->
       <footer></footer>
     </div>
+    <!--javascript-->
+    <!--swiper-->
+    <script src="./js/swiper.js"></script>
   </body>
 </html>

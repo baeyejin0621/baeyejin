@@ -27,6 +27,10 @@ header {
   width: 100%;
   height: 8rem;
   background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 header .con {
@@ -64,14 +68,15 @@ header nav ul li {
 /*호버할 때 나타날 꾸밈 요소*/
 header nav ul li::before,
 header nav ul li::after {
-  display: none;
+  display: block;
   font-size: 3.4rem;
   font-weight: 600;
   color: var(--main-color);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  transition: 0.3s;
+  transform: translateY(-50%) scale(3, 2);
+  opacity: 0;
+  transition: 0.2s;
 }
 
 header nav ul li::before {
@@ -99,6 +104,104 @@ header nav ul li:hover {
 
 header nav ul li:hover::after,
 header nav ul li:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/*메인*/
+main {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+
+/*메인 비주얼*/
+.main_visual {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/*비주얼 이미지*/
+.main_visual .visual_img {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*이미지 앞에 씌울 흰색 마스크*/
+.main_visual .visual_img .white_mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(1.5px);
+}
+
+/*이미지*/
+.main_visual .visual_img img {
+  width: 100%;
+  transform: scale(1.2);
+  object-fit: cover;
+}
+
+/*비주얼 텍스트*/
+.main_visual .visual_txt {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/*아랫단*/
+.main_visual .visual_txt .inner_wrap {
+  display: flex;
+}
+
+/*돌아가는 부분*/
+.main_visual .visual_txt .swiper {
+  width: 24rem;
+  height: 6rem;
+}
+
+.main_visual .visual_txt .swiper .swiper-wrapper {
+  position: relative;
+}
+/*바뀌는 부분 양옆 대괄호 부분*/
+.main_visual .visual_txt .swiper::before,
+.main_visual .visual_txt .swiper::after {
   display: block;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.main_visual .visual_txt .swiper::before {
+  content: "[";
+  left: -4rem;
+}
+
+.main_visual .visual_txt .swiper::after {
+  content: "]";
+  right: -4rem;
 }

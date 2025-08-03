@@ -152,3 +152,14 @@ button {
   border: none;
   padding: 0;
 }
+/*안티앨리어싱 효과*/
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transform: rotate(0.03deg);
+}
