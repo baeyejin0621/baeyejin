@@ -9,7 +9,7 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   direction: "vertical",
   autoplay: {
-    delay: 3000,
+    delay: 1500,
     reverseDirection: true,
   },
   resistance: false,
