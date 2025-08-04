@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger: ".sec2 .sec_title",
       start: "0% 9%",
     },
+    onStart: () => {
+      document.documentElement.style.overflowY = "hidden";
+
+      document.querySelector(".sec2").scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+    onComplete: () => {
+      document.documentElement.style.overflowY = "auto";
+    },
   });
 
   //섹션 제목 글자 하나하나
