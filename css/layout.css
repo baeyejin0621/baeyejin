@@ -284,8 +284,8 @@ section {
 
 /*세번째 섹션*/
 
-/*섹션 제목*/
-.sec3 h2 {
+/*섹션 제목 공통 설정*/
+section h2 {
   width: 100%;
   text-align: center;
   font-size: 6.4rem;
@@ -350,4 +350,107 @@ section {
 
 .sec3 .content .content_box:hover > p {
   opacity: 1;
+}
+
+/*네번째 섹션*/
+
+/*컨텐츠 영역*/
+.sec4 .content {
+  width: 100%;
+  height: auto;
+}
+
+/*컨텐츠*/
+.sec4 .con_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+  margin-bottom: 40rem;
+}
+
+.sec4 .con_wrap:last-child {
+  margin-bottom: 0;
+}
+
+/*썸네일*/
+.sec4 .con_wrap .thumb {
+  width: 81.8rem;
+  height: 55rem;
+  border: 1px solid var(--black-color5);
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec4 .con_wrap .thumb > img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/*왼쪽 정보 영역*/
+.sec4 .con_wrap .info {
+  width: fit-content;
+  height: auto;
+}
+
+.sec4 .con_wrap .info .info_line {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+}
+
+.sec4 .con_wrap .info .info_line h3 {
+  width: 15rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.sec4 .con_wrap .info .info_line p {
+  font-size: 1.7rem;
+  color: var(--black-color2);
+  word-break: keep-all;
+}
+
+.sec4 .con_wrap .info .info_line p span {
+  color: var(--black-color4);
+}
+
+/*참고 링크*/
+.sec4 .con_wrap .info .info_line:last-child {
+  margin-bottom: 0;
+}
+
+.sec4 .con_wrap .info .info_line:last-child .icons {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.sec4 .con_wrap .info .info_line:last-child .icons a {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.sec4 .con_wrap .info .info_line:last-child .icons i {
+  font-size: 3.6rem;
+  color: var(--black-color1);
+  transition: 0.3s;
+}
+
+.sec4 .con_wrap .info .info_line:last-child .icons a:last-child i {
+  font-size: 3.2rem;
+}
+
+/*아이콘에 호버하면*/
+.sec4 .con_wrap .info .info_line:last-child .icons i:hover {
+  color: var(--main-color);
 }
