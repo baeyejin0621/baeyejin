@@ -496,3 +496,19 @@ section h2 {
 .sec5 a:hover h3 {
   color: var(--main-color);
 }
+
+/*푸터*/
+footer {
+  width: 100%;
+  height: fit-content;
+  padding: 3.2rem 0;
+  background-color: var(--black-color1);
+  color: var(--white-color);
+}
+
+footer p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+}
