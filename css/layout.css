@@ -423,6 +423,7 @@ section h2 {
 
 /*참고 링크*/
 .sec4 .con_wrap .info .info_line:last-child {
+  align-items: center;
   margin-bottom: 0;
 }
 
@@ -452,5 +453,46 @@ section h2 {
 
 /*아이콘에 호버하면*/
 .sec4 .con_wrap .info .info_line:last-child .icons i:hover {
+  color: var(--main-color);
+}
+
+/*다섯번째 섹션*/
+.sec5 .con_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec5 a {
+  width: 46rem;
+  height: 20rem;
+  border-radius: 6.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sec5 a h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.sec5 a p {
+  font-size: 2.4rem;
+  color: var(--black-color3);
+}
+
+/*호버하면*/
+.sec5 a:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+}
+
+.sec5 a:hover h3 {
   color: var(--main-color);
 }
