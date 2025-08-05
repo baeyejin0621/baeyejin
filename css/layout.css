@@ -281,3 +281,73 @@ section {
   color: var(--black-color4);
   font-weight: 400;
 }
+
+/*세번째 섹션*/
+
+/*섹션 제목*/
+.sec3 h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 6.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 12rem;
+}
+
+/*컨텐츠 영역*/
+.sec3 .content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+
+/*컨텐츠 박스*/
+.sec3 .content .content_box {
+  width: 46rem;
+  height: 46rem;
+  padding: 8rem 6rem;
+  box-sizing: border-box;
+  border-radius: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  transition: 0.5s;
+}
+
+/*박스 아이콘*/
+.sec3 .content .content_box .thumb {
+  height: 10rem;
+}
+
+.sec3 .content .content_box .thumb > img {
+  height: 100%;
+}
+
+/*박스 제목*/
+.sec3 .content .content_box > h3 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+/*박스 설명*/
+.sec3 .content .content_box > p {
+  font-size: 1.7rem;
+  color: var(--black-color3);
+  text-align: center;
+  line-height: 1.5;
+  word-break: keep-all;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/*박스에 호버하면*/
+.sec3 .content .content_box:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
+.sec3 .content .content_box:hover > p {
+  opacity: 1;
+}
