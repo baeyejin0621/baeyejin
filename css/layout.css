@@ -284,6 +284,13 @@ section {
 
 /*세번째 섹션*/
 
+/*스크롤트리거 애니메이션을 위해 섹션 투명하게 하기*/
+.sec3,
+.sec4,
+.sec5 {
+  opacity: 0;
+}
+
 /*섹션 제목 공통 설정*/
 section h2 {
   width: 100%;
@@ -486,6 +493,8 @@ section h2 {
 .sec5 a p {
   font-size: 2.4rem;
   color: var(--black-color3);
+  opacity: 0;
+  transition: 0.3s;
 }
 
 /*호버하면*/
@@ -495,6 +504,10 @@ section h2 {
 
 .sec5 a:hover h3 {
   color: var(--main-color);
+}
+
+.sec5 a:hover p {
+  opacity: 1;
 }
 
 /*푸터*/

@@ -3,6 +3,11 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, CustomEase);
 
+  /*새로고침하면 스크롤 위치 최상단으로 이동*/
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   /*두번째 섹션*/
   //섹션 제목 애니메이션
   let tl = gsap.timeline({
@@ -12,10 +17,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     onStart: () => {
       document.documentElement.style.overflowY = "hidden";
-
-      document.querySelector(".sec2").scrollIntoView({
-        behavior: "smooth",
-      });
     },
     onComplete: () => {
       document.documentElement.style.overflowY = "auto";
@@ -90,4 +91,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       "<"
     );
+
+  /*섹션 올라오면서 투명도 1 되는 효과*/
+
+  //섹션들
+  let section = Array.from(document.querySelectorAll("section"));
+  section.shift();
+  section.shift();
+  console.log(section);
+
+  section.forEach((element) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: "-25% 50%",
+          end: "0% 0%",
+          markers: true,
+        },
+      })
+      .fromTo(
+        element,
+        {
+          y: 200,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+        }
+      );
+  });
 });
