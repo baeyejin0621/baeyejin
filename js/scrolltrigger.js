@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     onComplete: () => {
       document.documentElement.style.overflowY = "auto";
+      ScrollTrigger.refresh();
     },
   });
 
@@ -98,22 +99,88 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let section = Array.from(document.querySelectorAll("section"));
   section.shift();
   section.shift();
-  console.log(section);
 
   section.forEach((element) => {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: element,
-          start: "-25% 50%",
+          start: "0 20%",
           end: "0% 0%",
-          markers: true,
         },
       })
       .fromTo(
         element,
         {
-          y: 200,
+          y: 150,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+        }
+      );
+  });
+
+  /*세번째 섹션*/
+
+  //컨텐츠 박스
+  const contentBox = document.querySelectorAll(".sec3 .content_box");
+
+  let sec3Tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sec3",
+      start: "0% 20%",
+    },
+  });
+
+  contentBox.forEach((element, index) => {
+    if (index === 0) {
+      sec3Tl.fromTo(
+        element,
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.1,
+        }
+      );
+    } else {
+      sec3Tl.fromTo(
+        element,
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.1,
+        },
+        ">"
+      );
+    }
+  });
+
+  /*네번째 섹션*/
+
+  //컨텐츠 랩
+  const contentWrap = Array.from(document.querySelectorAll(".sec4 .con_wrap"));
+  contentWrap.shift();
+
+  contentWrap.forEach((element) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: "0% 70%",
+        },
+      })
+      .fromTo(
+        element,
+        {
+          y: 100,
         },
         {
           y: 0,
@@ -121,5 +188,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
           duration: 0.3,
         }
       );
+  });
+
+  /*다섯번째 섹션*/
+
+  //a 태그
+  const sec5A = document.querySelectorAll(".sec5 a");
+
+  let sec5Tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sec5",
+      start: "0% 20%",
+    },
+  });
+
+  sec5A.forEach((element, index) => {
+    if (index === 0) {
+      sec5Tl.fromTo(
+        element,
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.1,
+        }
+      );
+    } else {
+      sec5Tl.fromTo(
+        element,
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.1,
+        },
+        ">"
+      );
+    }
   });
 });
