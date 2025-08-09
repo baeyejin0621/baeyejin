@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@media screen and (min-width: 320px) {
+  /*컨텐츠 영역*/
+  .con {
+    width: 90%;
+  }
+
+  /*헤더*/
+  header {
+    height: 6rem;
+  }
+
+  /*로고*/
+  header h1 a {
+    font-size: 1.8rem;
+  }
+
+  /*gnb*/
+  header nav {
+    display: none;
+  }
+
+  /*섹션 공통 설정*/
+  section {
+    padding: 8rem 0;
+  }
+
+  /*메인 비주얼*/
+  .main_visual {
+    height: 34.4rem;
+  }
+
+  /*비주얼 이미지*/
+  .main_visual .visual_img {
+    height: 100%;
+  }
+
+  .main_visual .visual_img > img {
+    height: 100%;
+  }
+}
