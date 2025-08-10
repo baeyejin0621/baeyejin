@@ -181,6 +181,7 @@ section {
   font-weight: 600;
   line-height: 1.5;
   text-align: center;
+  white-space: nowrap;
 }
 
 /*아랫단*/
@@ -220,6 +221,15 @@ section {
   right: -4rem;
 }
 
+.main_visual .visual_txt .swiper + p {
+  display: flex;
+}
+
+.main_visual .visual_txt .swiper + p span {
+  display: block;
+  transform: translateX(63px);
+}
+
 /*두번째 섹션*/
 .sec2 {
   padding-top: 0;
@@ -252,6 +262,7 @@ section {
 .sec2 .content .con {
   display: flex;
   gap: 5.2rem;
+  position: relative;
 }
 
 /*이력서 사진 영역*/
@@ -336,6 +347,7 @@ section h2 {
   gap: 3.2rem;
   transition: 0.3s;
   opacity: 0;
+  cursor: pointer;
 }
 
 /*박스 아이콘*/
@@ -543,4 +555,8 @@ footer p {
   font-weight: 400;
   line-height: 2;
   text-align: center;
+}
+
+footer p br {
+  display: none;
 }
