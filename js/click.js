@@ -1,7 +1,6 @@
 "use strict";
 
 /*gnb 클릭 이벤트*/
-
 //gnb 메뉴들
 const gnb = Array.from(document.querySelectorAll("header nav ul li"));
 //section들
@@ -14,18 +13,20 @@ gnb.forEach((element, index) => {
   });
 });
 
-/*브라우저 너비가 1024 이하일 때*/
-const matchMedia1024 = window.matchMedia("(max-width: 1024px)");
+/*브라우저 너비가 679px 이하일 때*/
+const matchMedia1024 = window.matchMedia("(max-width: 679px)");
 const sec3Box = document.querySelectorAll(".sec3 .content .content_box");
 const sec3BoxP = document.querySelectorAll(".sec3 .content .content_box > p");
+
 const sec3PHeight = [];
-sec3BoxP.forEach((element) => {
-  element.style.height = "fit-content";
-  sec3PHeight.push(getComputedStyle(element).height);
-  element.style.height = 0;
-});
 
 if (matchMedia1024.matches) {
+  sec3BoxP.forEach((element) => {
+    element.style.height = "fit-content";
+    sec3PHeight.push(getComputedStyle(element).height);
+    element.style.height = 0;
+  });
+
   sec3Box.forEach((element, index) => {
     element.addEventListener("click", () => {
       if (getComputedStyle(sec3BoxP[index]).height == "0px") {
@@ -36,3 +37,14 @@ if (matchMedia1024.matches) {
     });
   });
 }
+
+/*브라우저 크기가 달라지면 새로고침*/
+window.addEventListener("resize", () => {
+  location.reload();
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger, CustomEase);
+
+    ScrollTrigger.refresh();
+  });
+});

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 1579px) {
   /*컨텐츠 영역*/
   .con {
     width: 95%;
@@ -88,8 +88,6 @@
   }
 
   .sec2 .sec_title {
-    height: 10rem;
-    font-size: 6.4rem;
     margin-bottom: 4rem;
   }
 
@@ -140,12 +138,13 @@
   }
 
   .sec3 .content .content_box {
-    width: calc(50% - 6px);
+    width: calc(50% - 0.6rem);
     height: fit-content;
     padding: 2rem;
     border-radius: 4rem;
     gap: 1.2rem;
     border: 1px solid var(--black-color6);
+    box-sizing: border-box;
   }
 
   .sec3 .content .content_box .thumb {
@@ -173,11 +172,11 @@
     gap: 2rem;
     margin-bottom: 12rem;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .sec4 .con_wrap .thumb {
-    width: 100%;
-    height: 20rem;
+    width: min(100%, 818px);
     border-radius: 1.2rem;
   }
 
@@ -217,9 +216,9 @@
   }
 
   .sec5 a {
-    width: 100%;
-    height: 14rem;
-    border-radius: 5.2rem;
+    width: auto;
+    padding: 4rem 6rem;
+    border-radius: 4rem;
     gap: 1.2rem;
   }
 
@@ -238,5 +237,238 @@
 
   footer p br {
     display: block;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1579px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 1579px) {
+  html {
+    font-size: 12px;
+  }
+
+  /*헤더*/
+
+  /*로고*/
+  header h1 a {
+    font-size: 2rem;
+  }
+
+  /*gnb*/
+  header nav {
+    display: block;
+  }
+
+  header nav ul {
+    gap: 4rem;
+  }
+
+  header nav ul li {
+    width: 5rem;
+    font-size: 1.2rem;
+    line-height: 6rem;
+  }
+
+  header nav ul li::before,
+  header nav ul li::after {
+    font-size: 2rem;
+  }
+
+  header nav ul li::before {
+    left: -0.2rem;
+  }
+
+  header nav ul li::after {
+    right: -0.2rem;
+  }
+
+  header nav ul li:nth-child(3)::before {
+    left: -1rem;
+  }
+
+  header nav ul li:nth-child(3)::after {
+    right: -1rem;
+  }
+
+  /*메인 비주얼*/
+  .main_visual {
+    height: 40rem;
+  }
+  .main_visual .visual_txt .swiper + p {
+    flex-direction: row;
+  }
+
+  .main_visual .visual_txt .swiper + p span:last-child {
+    transform: translate(16px);
+  }
+
+  .main_visual .visual_img img {
+    width: 100%;
+    transform: scale(1.2);
+  }
+
+  /*두번째 섹션*/
+  .sec2 .img_area {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .sec2 .sec_title {
+    margin-bottom: 6rem;
+  }
+
+  /*세번째 섹션*/
+
+  /*섹션 제목 공통 설정*/
+  section h2 {
+    margin-bottom: 6rem;
+  }
+
+  .sec3 .content .content_box {
+    width: calc(50% - 0.6rem);
+    height: calc(50% - 0.6rem);
+    padding: 6rem 4rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8.5rem;
+    gap: 2rem;
+  }
+
+  .sec3 .content .content_box .thumb {
+    height: 6rem;
+  }
+
+  .sec3 .content .content_box > p {
+    height: fit-content;
+    opacity: 0;
+  }
+
+  /*박스에 호버하면*/
+  .sec3 .content .content_box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+    background-color: transparent;
+  }
+
+  .sec3 .content .content_box:hover > p {
+    opacity: 1;
+  }
+
+  /*네번째 섹션*/
+  .sec4 .con_wrap {
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .sec4 .con_wrap .info {
+    padding: 10px 0 0;
+  }
+
+  .sec4 .con_wrap .info .info_line h3 {
+    width: 8rem;
+  }
+
+  /*다섯번째 섹션*/
+  .sec5 .con_wrap {
+    flex-direction: row;
+  }
+
+  .sec5 a {
+    width: 5rem;
+    padding: 3.2rem 6rem;
+    border-radius: 2.4rem;
+  }
+
+  .sec5 a p {
+    display: none;
+  }
+
+  /*푸터*/
+  footer p br:first-of-type {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 880px) and (max-width: 1579px) {
+  html {
+    font-size: 13px;
+  }
+
+  /*섹션 공통 설정*/
+  section {
+    padding: 12rem 0;
+  }
+
+  /*섹션 제목 공통 설정*/
+  section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 6.4rem;
+  }
+
+  /*두번째 섹션*/
+  .sec2 {
+    padding-top: 12rem;
+  }
+
+  .sec2 .sec_title {
+    margin-bottom: 6.4rem;
+  }
+
+  .sec2 .content .con {
+    gap: 2.8rem;
+  }
+
+  .sec2 .img_area {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  /*세번째 섹션*/
+  .sec3 .content .content_box {
+    width: calc(33% - 1.7rem);
+    border-radius: 5.2rem;
+  }
+
+  /*다섯번째 섹션*/
+  .sec5 a {
+    width: 16rem;
+    padding: 2.6rem 2rem;
+    border-radius: 2.8rem;
+  }
+
+  .sec5 a p {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1579px) {
+  html {
+    font-size: 13.5px;
+  }
+
+  /*섹션 공통 설정*/
+  section {
+    padding: 14rem 0;
+  }
+
+  /*메인 비주얼*/
+  .main_visual {
+    height: 100vh;
+  }
+
+  /*두번째 섹션*/
+  .sec2 {
+    padding-top: 14rem;
+  }
+
+  /*다섯번째 섹션*/
+  .sec5 a {
+    width: 20rem;
+    padding: 2.6rem 2rem;
+    border-radius: 2.8rem;
   }
 }
