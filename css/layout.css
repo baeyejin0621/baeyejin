@@ -147,6 +147,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 /*이미지 앞에 씌울 흰색 마스크*/
@@ -191,7 +192,6 @@ section {
 
 /*돌아가는 부분*/
 .main_visual .visual_txt .swiper {
-  width: 24rem;
   height: 6rem;
 }
 
@@ -208,6 +208,7 @@ section {
   transform: translateY(-50%);
   font-size: 4rem;
   font-weight: 600;
+  line-height: 1;
   color: var(--main-color);
 }
 
@@ -336,8 +337,8 @@ section h2 {
 
 /*컨텐츠 박스*/
 .sec3 .content .content_box {
-  width: calc(50% - 20px);
-  height: calc(1500px / 2 - 20px);
+  width: 46rem;
+  height: 46rem;
   padding: 8rem 6rem;
   box-sizing: border-box;
   border-radius: 16rem;
@@ -503,12 +504,11 @@ section h2 {
 }
 
 .sec5 a {
-  width: 46rem;
-  padding: 6rem 10rem;
+  height: 20rem;
   border-radius: 6.8rem;
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
+  flex: 1;
   gap: 2.8rem;
   justify-content: center;
   align-items: center;

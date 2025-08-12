@@ -14,13 +14,13 @@ gnb.forEach((element, index) => {
 });
 
 /*브라우저 너비가 679px 이하일 때*/
-const matchMedia1024 = window.matchMedia("(max-width: 679px)");
+const matchMedia679 = window.matchMedia("(max-width: 679px)");
 const sec3Box = document.querySelectorAll(".sec3 .content .content_box");
 const sec3BoxP = document.querySelectorAll(".sec3 .content .content_box > p");
 
 const sec3PHeight = [];
 
-if (matchMedia1024.matches) {
+if (matchMedia679.matches) {
   sec3BoxP.forEach((element) => {
     element.style.height = "fit-content";
     sec3PHeight.push(getComputedStyle(element).height);

@@ -33,3 +33,22 @@ window.addEventListener("resize", () => {
     element.style.height = thumbHeight + "px";
   });
 });
+
+/*세번째 섹션 컨텐츠 박스*/
+/*브라우저 너비가 680 - 1578px일 때*/
+const matchMedia680 = window.matchMedia(
+  "(min-width: 680px) and (max-width: 1578px)"
+);
+
+if (matchMedia680.matches) {
+  const contentBox = document.querySelectorAll(".sec3 .content_box");
+
+  if (
+    getComputedStyle(contentBox[1]).width.slice(0, -2) >
+    getComputedStyle(contentBox[1]).height.slice(0, -2)
+  ) {
+    contentBox.forEach((element) => {
+      element.style.height = getComputedStyle(element).width;
+    });
+  }
+}

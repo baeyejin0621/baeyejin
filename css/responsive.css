@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (min-width: 320px) and (max-width: 1579px) {
+@media screen and (min-width: 320px) and (max-width: 1578px) {
   /*컨텐츠 영역*/
   .con {
     width: 95%;
@@ -8,7 +8,7 @@
 
   /*헤더*/
   header {
-    height: 6rem;
+    height: min(6rem, 80px);
   }
 
   /*로고*/
@@ -48,26 +48,25 @@
 
   /*비주얼 텍스트*/
   .main_visual .visual_txt {
-    font-size: 1.3rem;
+    font-size: clamp(13px, 2.4vw, 36px);
     top: calc(50% + 1rem);
   }
 
   .main_visual .visual_txt .swiper {
-    width: 9rem;
-    height: 2rem;
+    height: clamp(20px, 4vw, 60px);
   }
 
   .main_visual .visual_txt .swiper::before,
   .main_visual .visual_txt .swiper::after {
-    font-size: 1.3rem;
+    font-size: clamp(13px, 3vw, 36px);
   }
 
   .main_visual .visual_txt .swiper::before {
-    left: -1rem;
+    left: clamp(-40px, -2vw, -10px);
   }
 
   .main_visual .visual_txt .swiper::after {
-    right: -1rem;
+    right: clamp(-40px, -2vw, -10px);
   }
 
   .main_visual .visual_txt .swiper + p {
@@ -75,7 +74,7 @@
   }
 
   .main_visual .visual_txt .swiper + p span {
-    transform: translateX(16px);
+    transform: translateX(clamp(16px, 3.4vw, 63px));
   }
 
   .main_visual .visual_txt .swiper + p span:last-child {
@@ -216,9 +215,9 @@
   }
 
   .sec5 a {
-    width: auto;
-    padding: 4rem 6rem;
-    border-radius: 4rem;
+    height: fit-content;
+    padding: 4rem 0;
+    border-radius: 3.6rem;
     gap: 1.2rem;
   }
 
@@ -235,18 +234,18 @@
     font-size: 1rem;
   }
 
-  footer p br {
+  footer p br:first-of-type {
     display: block;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1579px) {
+@media screen and (min-width: 480px) and (max-width: 1578px) {
   html {
     font-size: 11px;
   }
 }
 
-@media screen and (min-width: 680px) and (max-width: 1579px) {
+@media screen and (min-width: 680px) and (max-width: 1578px) {
   html {
     font-size: 12px;
   }
@@ -264,13 +263,13 @@
   }
 
   header nav ul {
-    gap: 4rem;
+    gap: clamp(48px, 7vw, 150px);
   }
 
   header nav ul li {
     width: 5rem;
     font-size: 1.2rem;
-    line-height: 6rem;
+    line-height: min(6rem, 80px);
   }
 
   header nav ul li::before,
@@ -303,7 +302,7 @@
   }
 
   .main_visual .visual_txt .swiper + p span:last-child {
-    transform: translate(16px);
+    transform: translateX(clamp(16px, 3.4vw, 63px));
   }
 
   .main_visual .visual_img img {
@@ -330,7 +329,6 @@
 
   .sec3 .content .content_box {
     width: calc(50% - 0.6rem);
-    height: calc(50% - 0.6rem);
     padding: 6rem 4rem;
     box-sizing: border-box;
     border: none;
@@ -378,8 +376,7 @@
   }
 
   .sec5 a {
-    width: 5rem;
-    padding: 3.2rem 6rem;
+    padding: 3.2rem 0;
     border-radius: 2.4rem;
   }
 
@@ -393,7 +390,7 @@
   }
 }
 
-@media screen and (min-width: 880px) and (max-width: 1579px) {
+@media screen and (min-width: 880px) and (max-width: 1578px) {
   html {
     font-size: 13px;
   }
@@ -427,16 +424,24 @@
     height: 18rem;
   }
 
+  .sec2 .info_area > div p > span {
+    display: inline;
+  }
+
   /*세번째 섹션*/
   .sec3 .content .content_box {
     width: calc(33% - 1.7rem);
     border-radius: 5.2rem;
   }
 
+  /*네번째 섹션*/
+  .sec4 .con_wrap .info .info_line {
+    margin-bottom: clamp(15px, 2.6vw, 40px);
+  }
+
   /*다섯번째 섹션*/
   .sec5 a {
-    width: 16rem;
-    padding: 2.6rem 2rem;
+    padding: 2.6rem 0;
     border-radius: 2.8rem;
   }
 
@@ -445,7 +450,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1579px) {
+@media screen and (min-width: 1024px) and (max-width: 1578px) {
   html {
     font-size: 13.5px;
   }
@@ -467,8 +472,7 @@
 
   /*다섯번째 섹션*/
   .sec5 a {
-    width: 20rem;
-    padding: 2.6rem 2rem;
-    border-radius: 2.8rem;
+    padding: clamp(35px, 3.4vw, 60px) 0;
+    border-radius: 2.6rem;
   }
 }

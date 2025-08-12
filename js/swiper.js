@@ -15,3 +15,10 @@ var swiper = new Swiper(".swiper", {
   resistance: false,
   loop: true,
 });
+
+let swiperWidth = document.querySelector(".main_visual .swiper");
+const swiperSlideWidth = getComputedStyle(
+  document.querySelector(".main_visual .swiper-slide:nth-child(2)")
+);
+
+swiperWidth.style.width = swiperSlideWidth;
