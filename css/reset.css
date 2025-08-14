@@ -169,3 +169,9 @@ h5,
 h6 {
   transform: rotate(0.03deg);
 }
+/*focus 상태 outline 없애기*/
+a:focus,
+div:focus,
+li:focus {
+  outline: none;
+}

@@ -410,6 +410,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let section = Array.from(document.querySelectorAll("section"));
   section.shift();
   section.shift();
+  section.pop();
 
   section.forEach((element) => {
     gsap
@@ -432,6 +433,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
       );
   });
+
+  //다섯번째 섹션
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".sec5",
+        start: "50% 100%",
+      },
+    })
+    .fromTo(
+      ".sec5",
+      {
+        y: 150,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+      }
+    );
 
   /*세번째 섹션*/
   //컨텐츠 박스
@@ -506,7 +527,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let sec5Tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".sec5",
-      start: "0% 50%",
+      start: "50% 100%",
     },
   });
 
